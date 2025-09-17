@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnHub - eLearning Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+  body {
+  overflow-x: hidden; /* Hide scrollbars */
+  }
+     .nav-link:hover {
+        color: #007bff !important; /* Soft blue on hover */
+        transform: scale(1.05);
+    }
+
+    /* Hover effect for logo */
+    .logo:hover {
+        transform: scale(1.05);
+    }
+
+    /* Subtle box shadow for a cleaner look */
+    .navbar {
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+	body {
+        padding-top: 70px; /* Prevents content from being hidden under navbar */
+    }
+    @media (max-width: 768px) {
+    .col-md-4 {
+      width: 100%;
+    }
+  }
+
+  /* Adding a subtle animation effect */
+  .card-body {
+    animation: fadeIn 1s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (max-width: 768px) {
+  .container1 {
+    text-align: center;  /* Center all content on small screens */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+
+  .learner {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  .points {
+    font-size: 18px;
+  }
+
+  .img1 {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .learner {
+    font-size: 24px;  /* Reduce font size further for very small screens */
+  }
+
+  .points {
+    font-size: 16px;
+  }
+
+  .img1 {
+    height: 15px;
+    width: 15px;
+  }
+}
+/* img */
+@media (max-width: 992px) {
+  .padding {
+    font-size: 40px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .padding {
+    font-size: 33px;
+    margin-top: 30px;
+  }}
+  @media (max-width: 576px) {
+  .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .padding {
+    font-size: 23px;
+    margin-top: 15px;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-sm-4 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+</style>
+<script>
+  // help of chatgpt
+	 window.onscroll = function () {
+        changeNavbarShadow();
+    };
+
+    function changeNavbarShadow() {
+        const navbar = document.querySelector('.navbar');
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            navbar.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.1)";
+        } else {
+            navbar.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+        }
+    }
+</script>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ffffff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="logo3.png" class="rounded logo" width="120px" height="30px" style="transition: transform 0.3s ease;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home" style="color: #2b3e50; transition: color 0.3s ease;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#courses" style="color: #2b3e50; transition: color 0.3s ease;">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about" style="color: #2b3e50; transition: color 0.3s ease;">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- <h1 style="text-align: center; color: blue; text-decoration: underline;">Welcome to LearnHub</h1> -->
+  <!-- Carousel Section -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <!-- <div class="carousel-indicators"> 
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" 
+    class="active bg-warning"></button> 
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" class="bg-warning"></button> 
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" class="bg-warning"></button> 
+    </div> -->
+	<div class="carousel-inner">
+	  <div class="carousel-item active">
+		<a href="#courses"><img src="jj.jpg" class="d-block w-100" alt="Course 1" ></a>
+		</div>
+	  </div>
+	  <div class="carousel-item">
+      <a href="#courses"><img src="p.jpg" class="d-block w-100" alt="Course 2"></a>
+		</div>
+	  </div>
+	  <div class="carousel-item">
+      <a href="#courses"><img src="fsd.png" class="d-block w-100" alt="Course 2"></a>
+		</div>
+	  </div>
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Next</span>
+	</button>
+  </div>
+  <section id="courses" class="container py-5">
+    <h2 class="text-center mb-4">Available Courses</h2>
+    <div class="row">
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card course-card">
+          <img src="jj.jpg" class="card-img-top" alt="Course 1">
+          <div class="card-body">
+            <h5 class="card-title">JAVA</h5>
+            <p class="card-text">Learn the basics to advanced concepts of JAVA.</p>
+            <a href="jenroll.html" class="btn btn-primary">Enroll</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card course-card">
+          <img src="p.jpg" class="card-img-top" alt="Course 2">
+          <div class="card-body">
+            <h5 class="card-title">PYTHON</h5>
+            <p class="card-text">Learn the basics to advanced concepts of PYTHON.</p>
+            <a href="penroll.html" class="btn btn-primary">Enroll</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card course-card">
+          <img src="fsd.png" class="card-img-top" alt="Course 3">
+          <div class="card-body">
+            <h5 class="card-title">FullStack Development</h5>
+            <p class="card-text">Learn the basics to advanced concepts of FullStack Development.</p>
+            <a href="fenroll.html" class="btn btn-primary">Enroll</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+	<div id="op" class="container-fliud bg"style="margin-top:10px;height: 250px;">
+	   <div class="row">
+		<div class="col-sm-4"><p class="padding">1lakh+ students</p></div>
+		<div class="col-sm-4"><p class="padding">3 courses available</p></div>
+		<div class="col-sm-4"><p class="padding">50 top class faculties</p></div>
+	   </div>
+	</div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container py-5">
+    <h2 class="text-center mb-4">About LearnHub</h2>
+    <p>LearnHub is an innovative eLearning platform designed to provide the highest quality online courses to help you achieve your educational and career goals.</p>
+    <div class="row" style="margin-top: 0px;margin-left:50px">
+      <div class="container my-5" id="team">
+        <div class="container">
+          <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 style="color: darkblue;">Community Experts</h1>
+            <p>Explore our team unparalleled expertise in housing websites, setting the standard for excellence and innovation in the industry.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md">
+              <div class="rounded overflow-hidden">
+                <img class="img-fluid team-img" src="a2.png" alt="">
+                <div class="text-center p-4 mt-3">
+                  <h5 class="fw-bold">Full Name</h5>
+                  <small>Designation</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="rounded overflow-hidden">
+                <img class="img-fluid team-img" src="a6.png" alt="">
+                <div class="text-center p-4 mt-3">
+                  <h5 class="fw-bold">Full Name</h5>
+                  <small>Designation</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="rounded overflow-hidden">
+                <img class="img-fluid team-img" src="a2.png" alt="">
+                <div class="text-center p-4 mt-3">
+                  <h5 class="fw-bold">Full Name</h5>
+                  <small>Designation</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="rounded overflow-hidden">
+                <img class="img-fluid team-img" src="a6.png" alt="">
+                <div class="text-center p-4 mt-3">
+                  <h5 class="fw-bold">Full Name</h5>
+                  <small>Designation</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </section>
+  
+  
+  <!-- Here it includes the outcomes of learners -->
+  <section class="container1">
+    <p class="learner">Learner outcomes on courses you will take</p><br>
+    <p class="points"><img src="tick.webp" class="img1"> Techniques to engage effectively with vulnerable children and young people.</p><br>
+    <p class="points"><img src="tick.webp" class="img1"> Join millions of people from around the world learning together.</p><br>
+    <p class="points"><img src="tick.webp" class="img1"> Online learning is as easy and natural.</p><br>
+    <p class="points"><img src="tick.webp" class="img1"> Students were able to develop new skills.</p><br>
+    <p class="points"><img src="tick.webp" class="img1"> Online learning is as easy and natural.</p>
+  </section>
+  
+
+  <footer class="ad1 bg1">
+    <div class="row" id="pos">
+      <div class="col-sm-4">
+        <p class="pos1">Our soultions</p><br>
+        <p class="pos2">Design & creatives</p><br>
+        <p class="pos2">Telecommunication</p><br>
+        <p class="pos2">programming</p><br>
+        <p class="pos2">Architecture</p>
+      </div>
+      <div class="col-sm-4">
+        <p class="pos1">Company</p><br>
+        <p class="pos2">Design & creatives</p><br>
+        <p class="pos2">Telecommunication</p><br>
+        <p class="pos2">programming</p><br>
+        <p class="pos2">Architecture</p>
+      </div>
+      <div class="col-sm-4">
+        <p class="pos1">Support</p><br>
+        <p class="pos2">Design & creatives</p><br>
+        <p class="pos2">Telecommunication</p><br>
+        <p class="pos2">programming</p><br>
+        <p class="pos2">Architecture</p>
+    </div>
+  </div>
+  <div class="social-icons">
+    <img src="twitter.jpg" class="rounded-circle">
+    <img src="facebook.webp" class="rounded-circle">
+    <img src="instagram.jpg" class="rounded-circle">
+    <img src="youtube.png" class="rounded-circle">
+  </div>
+</footer> 
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  
+</body>
+</html>
